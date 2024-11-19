@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Tailwind CSS */
+:root {
+  --primary-color: #CA8A04;
+  --secondary-color: #FACC15;
+  --accent-color: #FDE047;
+}
+
+/* Call-to-action Button Styles */
+.btn-cta {
+  @apply px-6 py-3 bg-[--primary-color] text-white rounded-full shadow-md;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  @apply bg-[--secondary-color];
+}
+
+/* Base Text Styles */
+body {
+  @apply text-gray-800;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-semibold;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl;
+}
+
+h3 {
+  @apply text-2xl md:text-3xl;
+}
+
+p {
+  @apply text-base md:text-lg;
+}
+
+a {
+  @apply text-[--primary-color] underline;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  @apply text-[--secondary-color];
+}
+
+/* Utility Classes for Spacing and Colors */
+.text-primary {
+  @apply text-[--primary-color];
+}
+
+.text-secondary {
+  @apply text-[--secondary-color];
+}
+
+.text-accent {
+  @apply text-[--accent-color];
+}
+
+.bg-primary {
+  @apply bg-[--primary-color];
+}
+
+.bg-secondary {
+  @apply bg-[--secondary-color];
+}
+
+.bg-accent {
+  @apply bg-[--accent-color];
+}
+
+/* Responsive Breakpoints */
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
+
+.hidden-mobile {
+  @apply hidden md:block;
+}
+
+@media (min-width: 768px) {
+  .text-large {
+    @apply text-lg;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-xl {
+    @apply text-xl;
+  }
+}
